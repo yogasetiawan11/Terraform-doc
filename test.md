@@ -7,9 +7,9 @@ if you already have AWS account you need to configure Terraform for AWS that fol
 - Go to AWS IAM (recommend ro use IAM only) 
 - Click security credentials
 all you need to do is fetch the information of your AWS access keys.
-after you get access keys and secret keys 
+copy the both ID key and secret after you get access keys ID and secret keys 
 - Open VS Code terminal then run command
-``aws configure`` then  put the access keys and secret access on the terminal
+``aws configure`` then  put the access keys ID and secret access on the terminal
 - afterwards you will ask for default region 
 - and the last you will ask default format you can fill in ``json`` format
 

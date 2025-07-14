@@ -11,6 +11,8 @@ let's say you want to spin up several server or you will deploy 5 Micro apps tha
 
 and the first step will be to go to AWS to prepare the set up. so the apps can be deploy there, this means you create Private Network space, you create server in EC2, you install docker each one of those, you set up security on the servers like firewall, plus any other tools that you might need for your app.
 
+if you have knowlege on just Terraform only, it's enough you just need to learn Terraform languange that is HCL (hashicorp language)
+
 so there are 2 to creating the whole set up. 
 1. Provisioning infrastructure, 
 2. Deploying applicaition. 
@@ -21,13 +23,12 @@ as person who create infrastructure you might have to deal with a lot of thing.
 
 let's say in your organization using AWS, and one of project in organization using GCP, when you move to different company where they use Azure, or openstack.
 
-every cloud provide has its own iac tools like AWS with (cloud formation template), opentstack come with (heat template), GCP with (CDKTF). it can be overwelmed if you learn all of this tools together it can be difficult. 
-
-and Terraform come to solve this problem
+every cloud provider has its own Iac tools like AWS with (cloud formation template), opentstack come with (heat template), GCP with (CDKTF). it can be difficult if you learn all of this tools together. Terraform comes to solve this problem you can use terraform it is irrespective of the provider that you are using.
 
 if you already have AWS account you need to configure Terraform for AWS that 
 followed these steps:
 #### Step 1
+- Make sure yu have AWS CLI install on your machine 
 - Go to AWS IAM (recommend ro use IAM only) 
 - Click security credentials
 all you need to do is fetch the information of your AWS access keys.

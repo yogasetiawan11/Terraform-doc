@@ -2,14 +2,13 @@
 Terraform is Iac (Infrastructure as Code) or a tool for infrastrcture provisioning.
 
 what does it means?
-let's say you started a project where you want to create some Application 
-and you want to set up some infrastructure from scratch where this Application will run 
+let's say you started a project where you want to create some Application and you want to set up some infrastructure from scratch where this Application will run 
 
 How does your App looks like
 let's say you want to spin up several server or you will deploy 5 Micro apps that make up as docker kontainer 
 and you also going to deploy a Database and you decide AWS to build your whole infrastructure and the first step will be to go to AWS to prepare the set up.
-so the apps can be deploy there, this means you create Private Network space, you create server in EC2, you install docker each one of those, 
-you set up security on the servers like firewall, plus any other tools that you might need for your app.
+
+so the apps can be deploy there, this means you create Private Network space, you create server in EC2, you install docker each one of those, you set up security on the servers like firewall, plus any other tools that you might need for your app.
 
 if you have knowlege on just Terraform only, it's enough you just need to learn Terraform languange that is HCL (hashicorp language)
 

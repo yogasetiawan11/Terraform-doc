@@ -1,10 +1,15 @@
+# Multi Region
+you can use ``alias`` keyword in you terraform to provide multiple region
+
+# Example
+```bash
 provider "aws" {                       
-  alias = "us-east-1"        
+  alias = "us-east-1"        # here you put the alias
   region = "us-east-1"   
 }
 
 provider "aws" {                       
-  alias = "us-east-2"        
+  alias = "us-east-2"        # here you put the alias
   region = "us-east-2"   
 }
 
@@ -21,3 +26,4 @@ resource "aws_instance" "name" {
     ami           = "ami-id4239423094"    
     instance_type = "t3.micro"
 }
+```

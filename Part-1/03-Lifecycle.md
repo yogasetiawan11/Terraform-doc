@@ -19,6 +19,9 @@ terraform init
 ```
 this command will initialize your Terraform working directory, downloading any necessary provider plugin
 
+# Terraform Apply
+The ``terraform plan`` command creates an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure. 
+
 # Apply the configuration
 run this command to create AWS resource defined in Terraform configuration
 ```bash

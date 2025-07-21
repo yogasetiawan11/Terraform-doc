@@ -1,6 +1,16 @@
 # What is ``.tfvars``
 In Terraform, ``.tfvars`` is a plain text file that defines the values for the input variables that declared in your Terraform configuration.
 
+it allows you to seperate configuration value from your Terraform code making easily manage.
+
+Structure folder and file when using ``.tfvars``.
+ main-folder.tf
+     |---> 
+     |--->
+     |--->
+
+the Provide configuration from ``main-folder.tf``
+
 # Why are .tfvars files important?
 ``Separation of configuration of code``: It can separates your infrastructure definition (the ``.tf`` files with resource and variable blocks) from your infrastructure values (the specific data you want to use for those variables).
 
@@ -17,4 +27,4 @@ In Terraform, ``.tfvars`` is a plain text file that defines the values for the i
 2. Create one or more ``.tfvars`` file in this file containing value for specific input variable
 3. When running terraform command (e.g terraform plan, terraform apply) you can spesify which ``.tfvars`` files to use within .tfvars file
 
-By using .tfvars you can keep your terraform code more flexible while tailoring configuration to different scenario and environment.
+By using ``.tfvars`` you can keep your terraform code more flexible while tailoring configuration to different scenario and environment.

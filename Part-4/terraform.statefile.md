@@ -10,15 +10,17 @@ Before you execute terraform using ``terraform apply`` or ``terraform plan`` ter
 
 3. **Meta Data**: Alongside the mappings between resources and remote objects, Terraform must also track metadata such as resource dependencies
 
-4. ****
+4. **Calculation**: Terraform uses the state file to calculate and display the difference between the desired configuration and the current state file
 
 ### Disadvantage of state file
-1. **Security Risk**: 
-2. ****:
+1. **Security Risk**: when Using state file your sensitive information such as API, Password may be stored in state file if it's commited to VCS because organization using VCS are often sharing among member in organization. 
+2. **Complexity**: Managing state file in VCS can be lead complex versioning issues, especially when multiple team or member working on the same infrastructure
 
-### Solve the advatages with remote backend (e.g S3)
-1. Create an s3 bucket: Creat s3 bucket to store your state file.
-2. Configure remote backend in terraform
+## Solve the advatages with remote backend (e.g S3)
+a Remote backend store state file outside local file system or Version control system. using s3 bucket it's a popular choice due to its scalability and reliablity you can store the state file here's how to set up:
+
+- Create an s3 bucket: Creat s3 bucket to store your state file.
+- Configure remote backend in terraform
 ```bash
 terraform {
   backend "s3" {
@@ -29,3 +31,7 @@ terraform {
 }
 
 ```
+## Dynamodb for state looking
+State locking in Terraform is a mechanism that prevents simultaneous modifications to your infrastructure by locking the state file during operations like terraform plan or terraform apply
+
+to provide state locking, create DynamoDB table and provide its name ``dynamodb_table`` this prevent concurrent access issues when multiple users or process run Terraform.

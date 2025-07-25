@@ -7,9 +7,9 @@ variable "cidr" {
 }   # this cidr block is used for the VPC
 
 resource "aws_key_pair" "my_key_pair" {
+    description = "My Key pair for python app"
     key_name   = "my_key"  # name of your key pair
     public_key = file("~/.ssh/id_rsa.pub") # path to your public key
-    description = "My Key pair for python app"
 }
 
 resource "aws_vpc" "my_vpc" {
